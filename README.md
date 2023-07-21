@@ -12,8 +12,6 @@ To deploy this project on your system ,
 
 --> Then, a webppage opens in which you have to enter the Attribute Values, and click on predict.
 
---> Click on the link in the page to get demo inputs and order of the Attributes which should be entered.
-
 --> After entering Attributes and clicking on predict we get our result as Malignant or benign on the webpage.
 
 ## Screenshots 📸
