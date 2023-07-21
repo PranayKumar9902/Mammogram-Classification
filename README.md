@@ -15,7 +15,12 @@ To deploy this project on your system ,
 --> After entering Attributes and clicking on predict we get our result as Malignant or benign on the webpage.
 
 ## Screenshots 📸
-
+### Home:
+[![Screenshot-7.png](https://i.postimg.cc/VsJ0CZPV/Screenshot-7.png)](https://postimg.cc/QVrMLbtQ)
+### benign:
+[![Screenshot-8.png](https://i.postimg.cc/YqXPsSs9/Screenshot-8.png)](https://postimg.cc/tYxD19yQ)
+### malignant:
+[![Screenshot-9.png](https://i.postimg.cc/T1ttFkQS/Screenshot-9.png)](https://postimg.cc/7JT1TnFM)
 
 
 ## Tech Stack ♨️
