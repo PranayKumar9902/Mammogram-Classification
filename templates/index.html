@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mammogram Classification</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        font-family: Arial;
+        margin: 0;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      form textarea {
+        width: 500px;
+        height: 30px;
+        border-radius: 3px;
+        border-color: red;
+        padding: 2px 10px;
+        box-sizing: border-box;
+        min-width: 300px;
+        margin-top: 29px;
+        font-size: 16px;
+      }
+
+      form button {
+        width: 90px;
+        height: 38px;
+        margin-top: 20px;
+        border-color: coral;
+        background-color: white;
+      }
+
+      form button:hover {
+        width: 90px;
+        height: 38px;
+        margin-top: 20px;
+        border-color: coral;
+        background-color: red;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .container {
+        height: 100%;
+      }
+
+
+
+      .header {
+        height: 124px;
+        margin-top: 0;
+        padding: 36px;
+        text-align: center;
+        background: #197278;
+        color: white;
+        font-size: 25px;
+      }
+      /* Page Content */
+
+      .predict {
+        margin-top: 42px;
+        font-size: 25px;
+        text-align: center;
+        color: white;
+      }
+
+      .Note{
+        display: flex;
+        padding: 20px;
+        background: black;
+        height: calc(100% - 245px);
+        justify-content: space-between;
+      }
+
+      .Guidelines{
+        color :white;
+        padding-top: 0 px;
+        margin-top: 0 px;
+        padding-left: 20px;
+        border : 3px solid white;
+        margin-bottom: 255px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Mammogram Classification</h1>
+      </div>
+      <div class = "Note">
+      <div class="content">
+        <form action="{{ url_for('predict')}}" method="post">
+          <textarea
+            name="Age"
+            placeholder="Enter Age"
+            required="required"
+            
+          ></textarea>
+          <textarea
+            name="Shape"
+            placeholder="Enter Shape"
+            required="required"
+            
+          ></textarea>
+          <textarea
+            name="Margin"
+            placeholder="Enter Margin"
+            required="required"
+            
+          ></textarea>
+          <textarea
+            name="Density"
+            placeholder="Enter the Density"
+            required="required"
+          ></textarea>
+
+          <button type="submit">
+            Predict
+          </button>
+        </form>
+        <div class="predict">
+          {{ prediction_text }}
+        </div>
+      </div>
+      <div class = "Guidelines"> 
+        <h3>BI-RADS assessment: 1 to 5 (ordinal)</h3>
+        <h3>Age: patient's age in years (integer)</h3>
+        <h3>Shape: mass shape: round=1 oval=2 lobular=3 irregular=4 (nominal)</h3>
+        <h3>Margin: mass margin: circumscribed=1 microlobulated=2 obscured=3 ill-defined=4 spiculated=5 (nominal)</h3>
+        <h3>Density: mass density high=1 iso=2 low=3 fat-containing=4 (ordinal)</h3>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
